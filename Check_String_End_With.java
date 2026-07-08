@@ -6,7 +6,7 @@ public class Check_String_End_With
 	{	
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter main String");
-		String s1 = sc.nextLine();
+		String s1 = sc.next();
 		System.out.println("Enter end String");
 		String s2 = sc.next();
 		if(s1.endsWith(s2))
