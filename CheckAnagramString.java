@@ -12,6 +12,19 @@ public class CheckAnagramString
 
 		s1 = s1.toLowerCase();
 		s2 = s2.toLowerCase();
+		/*
+		int[] count = new int[26];
+
+        for (int i = 0; i < s.length(); i++) {
+            count[s.charAt(i) - 'a']++;
+            count[t.charAt(i) - 'a']--;
+        }
+
+        for (int c : count) {
+            if (c != 0) return false;
+        }
+        return true;
+		*/
 		boolean result = checkAnagram(s1,s2);
 		if(result)
 		{
@@ -33,10 +46,10 @@ public class CheckAnagramString
 		for(int i=0;i<s1.length();i++)
 		{
 			char ch = s1.charAt(i);
-			boolean found = true; 
+			boolean found = false; 
 			for(int j=0;j<s2.length();j++)
 			{
-				if(!flag[i] && ch == s2.charAt(j))
+				if(!flag[j] && ch == s2.charAt(j))
 				{
 					flag[j] = true;
 					found = true;
@@ -50,4 +63,5 @@ public class CheckAnagramString
 		}
 		return true;
 	}
+	
 }
